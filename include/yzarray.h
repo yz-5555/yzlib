@@ -16,5 +16,6 @@ const void* yz_array_get(const YzArray* array, u32 index);
 #define YZ_ARRAY_GET(T, ARR, IDX) (const T*)yz_array_get(ARR, IDX)
 
 void yz_array_assign(YzArray* array, u32 index, const void* value);
+#define YZ_ARRAY_ASSIGN(T, ARR, IDX, ...) yz_array_assign(ARR, IDX, &(T)__VA_ARGS__)
 
 #endif
